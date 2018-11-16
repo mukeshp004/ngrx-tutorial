@@ -3,7 +3,7 @@ import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import * as actions from "../pizza.actions";
 import * as fromPizza from "../pizza.reducer";
-
+import { Pizza } from "../pizza.model";
 
 
 @Component({
@@ -21,7 +21,7 @@ export class PizzaOrderComponent implements OnInit {
   }
 
   createPizza() {
-    const pizza: fromPizza.Pizza = {
+    const pizza: Pizza = {
       id: new Date().getUTCMilliseconds().toString(),
       size: "small"
     };
